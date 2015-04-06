@@ -10,6 +10,8 @@
 // The sound engine still needs work, but it is not a high priority now.  One of these days, I'll
 // get around to it.
 
+// new comment
+
 using System;
 using System.Collections.Generic;
 using System.Text;
