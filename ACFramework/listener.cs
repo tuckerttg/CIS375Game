@@ -462,7 +462,7 @@ namespace ACFramework
             bool left = Framework.Keydev[vk.A];
             bool right = Framework.Keydev[vk.D];
             bool up = Framework.Keydev[vk.W];
-            bool down = Framework.Keydev[vk.];
+            bool down = Framework.Keydev[vk.S];
             bool pageup = Framework.Keydev[vk.PageUp];
             bool pagedown = Framework.Keydev[vk.PageDown];
 

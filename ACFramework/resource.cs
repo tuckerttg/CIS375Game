@@ -258,10 +258,10 @@ namespace ACFramework
         public static readonly int Space = 12;
         public static readonly int Insert = 13;
         public static readonly int Delete = 14;
-        public static readonly int W = 13;
-        public static readonly int A = 14;
-        public static readonly int S = 15;
-        public static readonly int D = 16;
+        public static readonly int W = 15;
+        public static readonly int A = 16;
+        public static readonly int S = 17;
+        public static readonly int D = 18;
 
 
         public static Key[] key;
