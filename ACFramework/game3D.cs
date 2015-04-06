@@ -50,9 +50,8 @@ namespace ACFramework
         public cCritter3DPlayer( cGame pownergame ) 
             : base( pownergame ) 
 		{ 
-			BulletClass = new cCritter3DPlayerBullet( ); 
-            Sprite = new cSpriteSphere(); 
-			Sprite.FillColor = Color.DarkGreen; 
+			BulletClass = new cCritter3DPlayerBullet( );
+            Sprite = new cSpriteQuake(ModelsMD2.Sorcerer);
 			Sprite.SpriteAttitude = cMatrix3.scale( 2, 0.8f, 0.4f ); 
 			setRadius( cGame3D.PLAYERRADIUS ); //Default cCritter.PLAYERRADIUS is 0.4.  
 			setHealth( 10 ); 
@@ -62,8 +61,9 @@ namespace ACFramework
 			MaxSpeed =  cGame3D.MAXPLAYERSPEED; 
 			AbsorberFlag = true; //Keeps player from being buffeted about.
 			ListenerAcceleration = 160.0f; //So Hopper can overcome gravity.  Only affects hop.
-		
-			Listener = new cListenerScooterYHopper( 0.2f, 12.0f ); 
+
+
+            Listener = new cListenerQuakeScooterYhopper(0.2f, 12.0f); 
             // the two arguments are walkspeed and hop strength -- JC
             
             addForce( new cForceGravity( 50.0f )); /* Uses  gravity. Default strength is 25.0.
