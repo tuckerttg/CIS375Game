@@ -52,8 +52,8 @@ namespace ACFramework
 		
         public cCritter3DPlayer( cGame pownergame ) 
             : base( pownergame ) 
-		{ 
-			BulletClass = new cCritter3DPlayerBullet( );
+		{
+            BulletClass = new cCritterBulletHomework();
             Sprite = new cSpriteQuake(ModelsMD2.Sorcerer);
 			Sprite.SpriteAttitude = cMatrix3.scale( 2, 0.8f, 0.4f ); 
 			setRadius( cGame3D.PLAYERRADIUS ); //Default cCritter.PLAYERRADIUS is 0.4.  
@@ -169,8 +169,45 @@ namespace ACFramework
                 return "cCritter3DPlayerBullet";
             }
         }
-	} 
+	}
+
+    class cCritterBulletHomework : cCritterBullet
+    {
+
+        public cCritterBulletHomework() { }
+
+        public override cCritterBullet Create()
+        // has to be a Create function for every type of bullet -- JC
+        {
+            return new cCritter3DPlayerBullet();
+        }
+
+        public override void initialize(cCritterArmed pshooter)
+        {
+            base.initialize(pshooter);
+
+            Sprite = new cSpriteQuake(ModelsMD2.Sorcerer);
+            Sprite.SpriteAttitude = cMatrix3.scale(2, 0.8f, 0.4f); 
+
+            // can use setSprite here too
+            setRadius(0.1f);
+        }
+
+        public override bool IsKindOf(string str)
+        {
+            return str == "cCritter3DPlayerBullet" || base.IsKindOf(str);
+        }
+
+        public override string RuntimeClass
+        {
+            get
+            {
+                return "cCritter3DPlayerBullet";
+            }
+        }
+    } 
 	
+
 	class cCritter3Dcharacter : cCritter  
 	{ 
 		
