@@ -5,7 +5,7 @@ using System.Windows.Forms;
 // mod: setRoom1 doesn't repeat over and over again
 //created
 
-// JAY DUB WAZ HERe
+
 namespace ACFramework
 { 
 	

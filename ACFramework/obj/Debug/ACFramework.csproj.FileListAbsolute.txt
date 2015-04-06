@@ -95,3 +95,12 @@ C:\Users\tucke_000\Source\Repos\CIS375Game\ACFramework\obj\Debug\ACFramework.exe
 C:\Users\tucke_000\Source\Repos\CIS375Game\ACFramework\obj\Debug\ACFramework.pdb
 C:\Users\Jess\Source\Repos\CIS375Game\ACFramework\obj\Debug\ACFramework.exe
 C:\Users\Jess\Source\Repos\CIS375Game\ACFramework\obj\Debug\ACFramework.pdb
+C:\Users\Max Dudzic\Source\Repos\CIS375Game\ACFramework\obj\Debug\ACFramework.exe
+C:\Users\Max Dudzic\Source\Repos\CIS375Game\ACFramework\obj\Debug\ACFramework.pdb
+C:\Users\Max Dudzic\Source\Repos\CIS375Game\ACFramework\bin\Debug\ACFramework.exe
+C:\Users\Max Dudzic\Source\Repos\CIS375Game\ACFramework\bin\Debug\ACFramework.pdb
+C:\Users\Max Dudzic\Source\Repos\CIS375Game\ACFramework\bin\Debug\OpenTK.xml
+C:\Users\Max Dudzic\Source\Repos\CIS375Game\ACFramework\bin\Debug\OpenTK.Utilities.xml
+C:\Users\Max Dudzic\Source\Repos\CIS375Game\ACFramework\obj\Debug\ACFramework.csprojResolveAssemblyReference.cache
+C:\Users\Max Dudzic\Source\Repos\CIS375Game\ACFramework\obj\Debug\ACFramework.Properties.Resources.resources
+C:\Users\Max Dudzic\Source\Repos\CIS375Game\ACFramework\obj\Debug\ACFramework.csproj.GenerateResource.Cache
