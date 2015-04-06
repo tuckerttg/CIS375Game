@@ -459,10 +459,10 @@ namespace ACFramework
             critter so I can use it to hit things and bounce and so on.  So I change
             the velocity.*/
             bool inreverse = false; //Only set TRUE if currently pressing VK_DOWN 
-            bool left = Framework.Keydev[vk.Left];
-            bool right = Framework.Keydev[vk.Right];
-            bool up = Framework.Keydev[vk.Up];
-            bool down = Framework.Keydev[vk.Down];
+            bool left = Framework.Keydev[vk.A];
+            bool right = Framework.Keydev[vk.D];
+            bool up = Framework.Keydev[vk.W];
+            bool down = Framework.Keydev[vk.];
             bool pageup = Framework.Keydev[vk.PageUp];
             bool pagedown = Framework.Keydev[vk.PageDown];
 
