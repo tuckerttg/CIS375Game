@@ -93,3 +93,5 @@ C:\Users\tucke_000\Source\Repos\CIS375Game\ACFramework\bin\Debug\OpenTK.xml
 C:\Users\tucke_000\Source\Repos\CIS375Game\ACFramework\bin\Debug\OpenTK.Utilities.xml
 C:\Users\tucke_000\Source\Repos\CIS375Game\ACFramework\obj\Debug\ACFramework.exe
 C:\Users\tucke_000\Source\Repos\CIS375Game\ACFramework\obj\Debug\ACFramework.pdb
+C:\Users\Jess\Source\Repos\CIS375Game\ACFramework\obj\Debug\ACFramework.exe
+C:\Users\Jess\Source\Repos\CIS375Game\ACFramework\obj\Debug\ACFramework.pdb
