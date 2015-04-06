@@ -119,7 +119,7 @@ namespace ACFramework
 
         public override cCritterBullet shoot()
         {
-            Framework.snd.play(Sound.LaserFire);
+            //Framework.snd.play(Sound.LaserFire);
             return base.shoot();
         }
 
@@ -179,7 +179,7 @@ namespace ACFramework
         public override cCritterBullet Create()
         // has to be a Create function for every type of bullet -- JC
         {
-            return new cCritter3DPlayerBullet();
+            return new cCritterBulletHomework();
         }
 
         public override void initialize(cCritterArmed pshooter)
