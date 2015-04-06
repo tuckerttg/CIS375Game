@@ -7,7 +7,7 @@ using System.Windows.Forms;
 // mod: setRoom1 doesn't repeat over and over again
 //created
 
-// EXCLUDED BINARIES (.EXE, .PDB)
+//hey there it's jess
 namespace ACFramework
 { 
 	
