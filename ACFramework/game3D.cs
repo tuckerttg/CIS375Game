@@ -386,12 +386,12 @@ namespace ACFramework
 		I am flying into the screen from HIZ towards LOZ, and
 		LOX below and HIX above and
 		LOY on the right and HIY on the left. */ 
-			SkyBox.setSideSolidColor( cRealBox3.HIZ, Color.Aqua ); //Make the near HIZ transparent 
-			SkyBox.setSideSolidColor( cRealBox3.LOZ, Color.Aqua ); //Far wall 
-			SkyBox.setSideSolidColor( cRealBox3.LOX, Color.DarkOrchid ); //left wall 
-            SkyBox.setSideTexture( cRealBox3.HIX, BitmapRes.Wall2, 2 ); //right wall 
-			SkyBox.setSideTexture( cRealBox3.LOY, BitmapRes.Graphics3 ); //floor 
-			SkyBox.setSideTexture( cRealBox3.HIY, BitmapRes.Sky ); //ceiling 
+			SkyBox.setSideSolidColor( cRealBox3.HIZ, Color.Black ); //Make the near HIZ transparent 
+			SkyBox.setSideSolidColor( cRealBox3.LOZ, Color.Black ); //Far wall 
+			SkyBox.setSideSolidColor( cRealBox3.LOX, Color.Black ); //left wall 
+            SkyBox.setSideSolidColor( cRealBox3.HIX, Color.Black ); //right wall 
+			SkyBox.setSideSolidColor( cRealBox3.LOY, Color.Black ); //floor 
+			SkyBox.setSideSolidColor( cRealBox3.HIY, Color.Black ); //ceiling 
 		
 			WrapFlag = cCritter.BOUNCE; 
 			_seedcount = 7; 
@@ -413,7 +413,7 @@ namespace ACFramework
 				height, //thickness param for wall's dy which goes perpendicular to the 
 					//baseline established by the frist two args, up the screen 
 				wallthickness, //height argument for this wall's dz  goes into the screen 
-				this );
+				this ); 
 			cSpriteTextureBox pspritebox = 
 				new cSpriteTextureBox( pwall.Skeleton, BitmapRes.Wall3, 16 ); //Sets all sides 
 				/* We'll tile our sprites three times along the long sides, and on the
