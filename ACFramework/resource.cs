@@ -36,6 +36,8 @@ namespace ACFramework
         public static readonly int Sky = 6;
         public static readonly int Wood2 = 7;
         public static readonly int Concrete = 8;
+        public static readonly int purpleYellowDots = 9;
+        public static readonly int lightning = 10;
         
 
         private static readonly string[] Bitmap = new string[] {
@@ -47,7 +49,10 @@ namespace ACFramework
                 "graphics3.bmp",
                 "sky.bmp",
                 "wood2.bmp",
-                "concrete1.bmp"
+                "concrete1.bmp",
+                "enemy.bmp",
+                "lightningAttack.bmp"
+
             };
 
         public BitmapRes()
@@ -264,7 +269,9 @@ namespace ACFramework
         public static readonly int A = 16;
         public static readonly int S = 17;
         public static readonly int D = 18;
-
+        public static readonly int Q = 19;
+        public static readonly int E = 20;
+        public static readonly int Enter = 21;
 
         public static Key[] key;
 
@@ -288,7 +295,10 @@ namespace ACFramework
                 Key.W,
                 Key.A,
                 Key.S,
-                Key.D
+                Key.D,
+                Key.Q,
+                Key.E,
+                Key.Enter
             };
 
         }
