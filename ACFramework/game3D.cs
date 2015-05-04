@@ -57,8 +57,9 @@ namespace ACFramework
             Sprite = new cSpriteQuake(ModelsMD2.Sorcerer);
 			Sprite.SpriteAttitude = cMatrix3.scale( 2, 0.8f, 0.4f ); 
 			setRadius( cGame3D.PLAYERRADIUS ); //Default cCritter.PLAYERRADIUS is 0.4.  
-			setHealth( 10 ); 
-			moveTo( _movebox.LoCorner.add( new cVector3( 0.0f, 0.0f, 2.0f ))); 
+			setHealth( 10 );
+            moveTo(new cVector3(20, 20, 20));
+			//moveTo( _movebox.LoCorner.add( new cVector3( 200.0f, 0.0f, 2.0f ))); 
 			WrapFlag = cCritter.CLAMP; //Use CLAMP so you stop dead at edges.
 			Armed = true; //Let's use bullets.
 			MaxSpeed =  cGame3D.MAXPLAYERSPEED; 
@@ -395,9 +396,11 @@ namespace ACFramework
 		
 			WrapFlag = cCritter.BOUNCE; 
 			_seedcount = 7; 
-			setPlayer( new cCritter3DPlayer( this )); 
+			setPlayer( new cCritter3DPlayer( this ));
+           
 			_ptreasure = new cCritterTreasure( this ); 
-		
+
+
 			/* In this world the x and y go left and up respectively, while z comes out of the screen.
 		A wall views its "thickness" as in the y direction, which is up here, and its
 		"height" as in the z direction, which is into the screen. */ 
@@ -414,12 +417,15 @@ namespace ACFramework
 					//baseline established by the frist two args, up the screen 
 				wallthickness, //height argument for this wall's dz  goes into the screen 
 				this ); 
+
+            // fill the wall with textures 
 			cSpriteTextureBox pspritebox = 
 				new cSpriteTextureBox( pwall.Skeleton, BitmapRes.Wall3, 16 ); //Sets all sides 
 				/* We'll tile our sprites three times along the long sides, and on the
 			short ends, we'll only tile them once, so we reset these two. */
-          pwall.Sprite = pspritebox; 
-		
+          pwall.Sprite = pspritebox;
+
+          
 		
 			//Then draw a ramp to the top of the wall.  Scoot it over against the right wall.
 			float planckwidth = 0.75f * height; 
@@ -430,6 +436,33 @@ namespace ACFramework
 						//which goes into the screen, so thickness goes to the right 
 				wallthickness, //_border.zradius(),  //height argument for wall's dz which goes into the screen 
 				this );
+
+
+
+
+
+            cCritterWall pPillar = new cCritterWall(
+            new cVector3(_border.Midx +2 , _border.Loy, 0),
+            new cVector3(_border.Midx  - 2 , _border.Loy, 0),
+            2,
+            2,
+            this);
+
+           /* pPillar.rotate(new cSpin(((float) Math.PI)/6.0f, // rotate in rads
+            new cVector3(0.0f, 1.0f , 0.0f))); // what axis to rotate 
+            */
+            pPillar.FillColor = Color.Blue;
+            
+            cSpriteTextureBox pspriteboxPillar =
+        new cSpriteTextureBox(pPillar.Skeleton, BitmapRes.Wall3, 16); //Sets all sides 
+            pPillar.Sprite = pspriteboxPillar;
+            /* We'll tile our sprites three times along the long sides, and on the
+        short ends, we'll only tile them once, so we reset these two. */
+
+
+            
+            
+
             cSpriteTextureBox stb = new cSpriteTextureBox(pwall.Skeleton, 
                 BitmapRes.Wood2, 2 );
             pwall.Sprite = stb;
@@ -455,7 +488,7 @@ namespace ACFramework
 	        SkyBox.setSideTexture( cRealBox3.LOY, BitmapRes.Concrete );
 	        SkyBox.setSideSolidColor( cRealBox3.HIY, Color.Blue );
 	        _seedcount = 0;
-	        Player.setMoveBox( new cRealBox3( 10.0f, 15.0f, 10.0f ) );
+	        Player.setMoveBox( new cRealBox3( 10.0f, 15.0f, 10.0f ) );/////////////////////////////////////////////////////////////
             float zpos = 0.0f; /* Point on the z axis where we set down the wall.  0 would be center,
 			halfway down the hall, but we can offset it if we like. */
             float height = 0.1f * _border.YSize;
