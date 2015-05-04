@@ -75,7 +75,7 @@ namespace ACFramework
 			ListenerAcceleration = 160.0f; //So Hopper can overcome gravity.  Only affects hop.
 
 
-            Listener = new cListenerQuakeScooterYhopper(0.2f, 12.0f); 
+            Listener = new cMyGameListener(0.2f, 12.0f); 
             // the two arguments are walkspeed and hop strength -- JC
             
             addForce( new cForceGravity( 50.0f )); /* Uses  gravity. Default strength is 25.0.
@@ -432,7 +432,7 @@ namespace ACFramework
 				wallthickness, //height argument for this wall's dz  goes into the screen 
 				this ); 
 			cSpriteTextureBox pspritebox = 
-				new cSpriteTextureBox( pwall.Skeleton, BitmapRes.Wall3, 16 ); //Sets all sides 
+				new cSpriteTextureBox( pwall.Skeleton, BitmapRes.lightning, 16 ); //Sets all sides 
 				/* We'll tile our sprites three times along the long sides, and on the
 			short ends, we'll only tile them once, so we reset these two. */
           pwall.Sprite = pspritebox; 
@@ -508,7 +508,7 @@ namespace ACFramework
             cRealBox3 skeleton = new cRealBox3();
             skeleton.copy(_border);
             setSkyBox(skeleton);
-            SkyBox.setAllSidesTexture(BitmapRes.Graphics1, 2);
+            SkyBox.setAllSidesTexture(BitmapRes.purpleYellowDots, 2);
             SkyBox.setSideTexture(cRealBox3.LOY, BitmapRes.Concrete);
             SkyBox.setSideSolidColor(cRealBox3.HIY, Color.Blue);
             _seedcount = 0;
