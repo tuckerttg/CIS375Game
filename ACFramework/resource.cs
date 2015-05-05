@@ -94,6 +94,9 @@ namespace ACFramework
         public static readonly int Goopy = 3;
         public static readonly int LaserFire = 4;
         public static readonly int Hallelujah = 5;
+        public static readonly int Tahn = 6;
+        public static readonly int IWut = 7;
+        public static readonly int Ahhh = 8;
 
         private static readonly string[] sound = new string[] {
                 "pop.wav",
@@ -101,7 +104,10 @@ namespace ACFramework
                 "crunch.wav",
                 "goopy.wav",
                 "laserfire3.wav",
-                "hallelujah.wav"
+                "hallelujah.wav",
+                "tahn.wav",
+                "iWut.wav",
+                "ahhh.wav"
             };
 
         public Sound()

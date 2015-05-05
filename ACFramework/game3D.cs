@@ -109,13 +109,13 @@ namespace ACFramework
 	 with a Treasure is different, but we let the Treasure contol that collision. */ 
 			if ( playerhigherthancritter ) 
 			{
-                Framework.snd.play(Sound.Goopy); 
+                //Framework.snd.play(Sound.Goopy); 
 				addScore( 10 ); 
 			} 
 			else 
 			{ 
 				damage( 1 );
-                //Framework.snd.play(Sound.Crunch); 
+                //Framework.snd.play(Sound.Tahn); 
 			} 
 			//pcritter.die(); 
 			return true; 
@@ -123,7 +123,7 @@ namespace ACFramework
 
         public override cCritterBullet shoot()
         {
-            //Framework.snd.play(Sound.LaserFire);
+            Framework.snd.play(Sound.Ahhh);
             return base.shoot();
         }
 
@@ -221,7 +221,7 @@ namespace ACFramework
 		{
             _health = 2;
 
-            addForce(new cForceObjectSeek(Player, 25.5f));
+            addForce(new cForceObjectSeek(Player, 15.5f));
 			addForce( new cForceGravity( 25.0f, new cVector3( 0.0f, -1, 0.00f ))); 
 			addForce( new cForceDrag( 2.0f ) );  // default friction strength 0.5 
 			Density = 2.0f; 
@@ -326,7 +326,7 @@ namespace ACFramework
 		{ 
 			if ( contains( pcritter )) //disk of pcritter is wholly inside my disk 
 			{
-                Framework.snd.play(Sound.Clap); 
+                //Framework.snd.play(Sound.Clap); 
 				pcritter.addScore( 100 ); 
 				pcritter.addHealth( 1 ); 
 				pcritter.moveTo( new cVector3( _movebox.Midx, _movebox.Loy + 1.0f,
@@ -698,9 +698,17 @@ namespace ACFramework
 			{ 
 				_gameover = true; 
 				Player.addScore( _scorecorrection ); // So user can reach _maxscore  
-                Framework.snd.play(Sound.Hallelujah);
+                Framework.snd.play(Sound.IWut);
                 return ; 
 			} 
+
+            if (sailorMoon != null && sailorMoon.Health==0)
+            {
+                MessageBox.Show("You defeated all evil!!!");
+                Framework.snd.play(Sound.IWut);
+                _gameover = true;
+
+            }
 		// (2) Also don't let the the model count diminish.
 					//(need to recheck propcount in case we just called seedCritters).
 			int modelcount = Biota.count( "cCritter3Dcharacter" ); 
@@ -713,6 +721,7 @@ namespace ACFramework
             if (wentThrough && (Age - startNewRoom) > 2.0f)
             {
                 wentThrough = false;
+      
             }
 
 
@@ -720,12 +729,15 @@ namespace ACFramework
             {
                 setRoom2();
                 door2.HitDoor = false;
+                Framework.snd.play(Sound.Tahn); 
             }
 
             if (door3 != null && door3.HitDoor)
             {
                 setRoom3();
+                MessageBox.Show("you must defeat the evil that is sailor moon to win")
                 door3.HitDoor = false;
+                Framework.snd.play(Sound.Tahn); 
             }
 
             if (door0.HitDoor && doorcollision == true)
@@ -735,6 +747,7 @@ namespace ACFramework
                     setRoom1();
                     doorcollision = false;
                     onRoom2=true;
+                    Framework.snd.play(Sound.Tahn); 
                 }
     
                 /**if (onRoom3)
