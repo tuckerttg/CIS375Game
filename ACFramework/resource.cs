@@ -38,6 +38,7 @@ namespace ACFramework
         public static readonly int Concrete = 8;
         public static readonly int purpleYellowDots = 9;
         public static readonly int lightning = 10;
+        public static readonly int mySprite=11;
         
 
         private static readonly string[] Bitmap = new string[] {
@@ -51,7 +52,8 @@ namespace ACFramework
                 "wood2.bmp",
                 "concrete1.bmp",
                 "enemy.bmp",
-                "lightningAttack.bmp"
+                "lightningAttack.bmp",
+                "wallMade.bmp"
 
             };
 
@@ -347,6 +349,8 @@ namespace ACFramework
         public static readonly int Knight = 3;
         public static readonly int CitrusFrog = 4;
         public static readonly int Sorcerer = 5;
+        public static readonly int SailorMoon = 6;
+        public static readonly int Penguin = 7;
 
         // at least one must be set true
         private static readonly ModelsMD2Info[] minfo = {
@@ -355,7 +359,9 @@ namespace ACFramework
             new ModelsMD2Info( "link", "soft_link.pcx", 0.1f, true ),
             new ModelsMD2Info( "pknight", "ctf_b.pcx", 0.15f, true ),
             new ModelsMD2Info( "citrusfrog", "BigRed.pcx", 0.3f, true ),
-            new ModelsMD2Info( "Sorcerer", "ctf_g.pcx", 0.3f, true)
+            new ModelsMD2Info( "Sorcerer", "ctf_g.pcx", 0.3f, true),
+            new ModelsMD2Info( "sailormoon", "Super.pcx", 0.3f, true ),
+            new ModelsMD2Info( "penguin", "ctf_b.pcx", 0.3f, true)
         };            
 
         private static int[] randomCritters;

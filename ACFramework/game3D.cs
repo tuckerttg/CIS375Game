@@ -115,9 +115,9 @@ namespace ACFramework
 			else 
 			{ 
 				damage( 1 );
-                Framework.snd.play(Sound.Crunch); 
+                //Framework.snd.play(Sound.Crunch); 
 			} 
-			pcritter.die(); 
+			//pcritter.die(); 
 			return true; 
 		}
 
@@ -221,9 +221,9 @@ namespace ACFramework
 		{
             _health = 2;
 
-
+            addForce(new cForceObjectSeek(Player, 25.5f));
 			addForce( new cForceGravity( 25.0f, new cVector3( 0.0f, -1, 0.00f ))); 
-			addForce( new cForceDrag( 20.0f ) );  // default friction strength 0.5 
+			addForce( new cForceDrag( 2.0f ) );  // default friction strength 0.5 
 			Density = 2.0f; 
 			MaxSpeed = 30.0f;
             if (pownergame != null) //Just to be safe.
@@ -385,6 +385,9 @@ namespace ACFramework
         private cCritterDoor door3;
 
         private cCritterWall movingWall;
+
+        private cCritter3Dcharacter sailorMoon;
+        private cCritter3Dcharacter penguin;
 		public cGame3D() 
 		{
             
@@ -498,6 +501,11 @@ namespace ACFramework
         public void setRoom1( )
         {
             
+<<<<<<< HEAD
+=======
+
+            Player.moveTo(new cVector3(0.0f, Border.Loy, Border.Hiz - 3.0f)); 
+>>>>>>> 842158de08565d77fd8165d34c279e9b7870d5f1
             onRoom2 = true;
             Biota.purgeCritters("cCritterWall");
             Biota.purgeCritters("cCritter3Dcharacter");
@@ -505,8 +513,8 @@ namespace ACFramework
 	        cRealBox3 skeleton = new cRealBox3();
             skeleton.copy( _border );
 	        setSkyBox(skeleton);
-	        SkyBox.setAllSidesTexture( BitmapRes.Graphics1, 2 );
-	        SkyBox.setSideTexture( cRealBox3.LOY, BitmapRes.Concrete );
+            SkyBox.setAllSidesTexture(BitmapRes.mySprite, 2);
+	        SkyBox.setSideTexture( cRealBox3.LOY, BitmapRes.mySprite );
 	        SkyBox.setSideSolidColor( cRealBox3.HIY, Color.Blue );
 	        _seedcount = 0;
 	        Player.setMoveBox( new cRealBox3( 10.0f, 15.0f, 10.0f ) );/////////////////////////////////////////////////////////////
@@ -527,6 +535,11 @@ namespace ACFramework
             door2.Sprite = pspritedoor;
             door2.HitDoor = false;
 
+            penguin = new cCritter3Dcharacter(this);
+            penguin.setHealth(10);
+            penguin.Sprite = new cSpriteQuake(ModelsMD2.Penguin);
+            penguin.addForce(new cForceObjectSeek(Player, 10.5f));
+
 
             /* We'll tile our sprites three times along the long sides, and on the
         short ends, we'll only tile them once, so we reset these two. */
@@ -537,6 +550,7 @@ namespace ACFramework
 
         public void setRoom2()
         {
+            
             Player.moveTo(new cVector3(0.0f, Border.Loy, Border.Hiz - 3.0f));
             Biota.purgeCritters("cCritterWall");
             Biota.purgeCritters("cCritter3Dcharacter");
@@ -567,6 +581,11 @@ namespace ACFramework
         short ends, we'll only tile them once, so we reset these two. */
             movingWall.Sprite = pspritebox;
             movingWall.addForce(new cForceObjectSeek(Player, 2.0f));
+
+            sailorMoon = new cCritter3Dcharacter(this);
+            sailorMoon.Sprite = new cSpriteQuake(ModelsMD2.SailorMoon);
+            sailorMoon.setHealth(10);
+            sailorMoon.addForce(new cForceObjectSeek(Player, 10.5f));
 
             wentThrough = true;
             startNewRoom = Age;
@@ -630,7 +649,11 @@ namespace ACFramework
 			Biota.purgeCritters( "cCritter3Dcharacter" );
             for (int i = 0; i < _seedcount; i++) 
 				new cCritter3Dcharacter( this );
+<<<<<<< HEAD
            
+=======
+            //Player.moveTo(new cVector3(0.0f, Border.Loy, Border.Hiz - 3.0f)); 
+>>>>>>> 842158de08565d77fd8165d34c279e9b7870d5f1
 				/* We start at hiz and move towards	loz */ 
 		} 
 
@@ -699,7 +722,6 @@ namespace ACFramework
 
             if (wentThrough && (Age - startNewRoom) > 2.0f)
             {
-                MessageBox.Show("What an idiot.");
                 wentThrough = false;
             }
 
