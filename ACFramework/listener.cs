@@ -488,7 +488,7 @@ namespace ACFramework
                 pcritter.Sprite.ModelState = State.Run;
             }
 
-            if (strifeLeft)
+            if (strifeRight)
             {
                 pcritter.Velocity = pcritter.AttitudeNormal.mult(-pcritter.MaxSpeed / 3);
                 pcritter.Sprite.ModelState = State.Run;
