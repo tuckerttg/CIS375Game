@@ -89,7 +89,7 @@ namespace ACFramework
         public override void update(ACView pactiveview, float dt)
         {
             base.update(pactiveview, dt); //Always call this first
- 
+            
         } 
 
         public override bool collide( cCritter pcritter ) 
@@ -301,7 +301,7 @@ namespace ACFramework
 	
 	class cCritterTreasure : cCritter 
 	{   // Try jumping through this hoop
-		
+	
 		public cCritterTreasure( cGame pownergame ) : 
 		base( pownergame ) 
 		{ 
@@ -387,6 +387,7 @@ namespace ACFramework
         private cCritterWall movingWall;
 		public cGame3D() 
 		{
+            
 			doorcollision = false;
             onRoom3 = false;
             onRoom2 = false;
@@ -454,7 +455,7 @@ namespace ACFramework
 				wallthickness, //_border.zradius(),  //height argument for wall's dz which goes into the screen 
 				this );
 
-
+           Player.moveTo(new cVector3(_border.Midx, _border.Loy + 5, _border.Midz + 10)); 
 
 
 
@@ -478,7 +479,7 @@ namespace ACFramework
 
 
             
-            
+           
 
             cSpriteTextureBox stb = new cSpriteTextureBox(pwall.Skeleton, 
                 BitmapRes.Wood2, 2 );
@@ -496,7 +497,7 @@ namespace ACFramework
         
         public void setRoom1( )
         {
-            Player.moveTo(new cVector3(0.0f, Border.Loy, Border.Hiz - 3.0f)); 
+            
             onRoom2 = true;
             Biota.purgeCritters("cCritterWall");
             Biota.purgeCritters("cCritter3Dcharacter");
@@ -515,6 +516,8 @@ namespace ACFramework
             float ycenter = -_border.YRadius + height / 2.0f;
             float wallthickness = cGame3D.WALLTHICKNESS;
 
+            
+            
             door2 = new cCritterDoor(
                 new cVector3(_border.Lox, _border.Loy, _border.Midz),
                 new cVector3(_border.Lox, _border.Midy - 3, _border.Midz),
@@ -627,7 +630,7 @@ namespace ACFramework
 			Biota.purgeCritters( "cCritter3Dcharacter" );
             for (int i = 0; i < _seedcount; i++) 
 				new cCritter3Dcharacter( this );
-            Player.moveTo(new cVector3(0.0f, Border.Loy, Border.Hiz - 3.0f)); 
+           
 				/* We start at hiz and move towards	loz */ 
 		} 
 

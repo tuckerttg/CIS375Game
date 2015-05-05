@@ -108,3 +108,4 @@ C:\Users\Jess\Source\Repos\CIS375Game\ACFramework\obj\Debug\ACFramework.Properti
 C:\Users\Jess\Source\Repos\CIS375Game\ACFramework\obj\Debug\ACFramework.csproj.GenerateResource.Cache
 C:\Users\Jess\Source\Repos\CIS375Game\ACFramework\obj\Debug\ACFramework.exe
 C:\Users\Jess\Source\Repos\CIS375Game\ACFramework\obj\Debug\ACFramework.pdb
+C:\Users\Jess\Source\Repos\CIS375Game\ACFramework\obj\Debug\ACFramework.csprojResolveAssemblyReference.cache
