@@ -105,4 +105,13 @@ C:\Users\Jess\Source\Repos\CIS375Game\ACFramework\obj\Debug\ACFramework.Properti
 C:\Users\Jess\Source\Repos\CIS375Game\ACFramework\obj\Debug\ACFramework.csproj.GenerateResource.Cache
 C:\Users\Jess\Source\Repos\CIS375Game\ACFramework\obj\Debug\ACFramework.exe
 C:\Users\Jess\Source\Repos\CIS375Game\ACFramework\obj\Debug\ACFramework.pdb
+<<<<<<< HEAD
 C:\Users\tucke_000\Source\Repos\CIS375Game\ACFramework\obj\Debug\ACFramework.csprojResolveAssemblyReference.cache
+=======
+<<<<<<< HEAD
+C:\Users\Jess\Source\Repos\CIS375Game\ACFramework\obj\Debug\ACFramework.csprojResolveAssemblyReference.cache
+=======
+C:\Users\tucke_000\Source\Repos\CIS375Game\ACFramework\bin\Debug\OpenTK.xml
+C:\Users\tucke_000\Source\Repos\CIS375Game\ACFramework\bin\Debug\OpenTK.Utilities.xml
+>>>>>>> 842158de08565d77fd8165d34c279e9b7870d5f1
+>>>>>>> 25cfb67595fa205aeb62a7818f057bc59d20a852
